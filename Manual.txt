@@ -1,0 +1,81 @@
+SISTEMA DE VENDAS COMPLETO =  JAVA - SPRINGBOT
+
+IR NO SITE https://start.spring.io/ E ADICIONAR TODAS ESSE DEPENDENCIAS:
+
+com.example
+
+Spring Boot DevTools 
+Spring Web 
+Thymeleaf
+Spring Data JPA
+Spring Security
+Spring Data JDBC
+PostgreSQL Driver
+
+ABRIR O PROJETO GERADO NO ECLIPCE PELO "Open projects from file System".
+
+EM sistema_sistema/src/main/java, CRIE O PAKCKAGE com.projeto.sistema.controle
+
+EM sistema_sistema/src/main/java, CRIE O PAKCKAGE com.projeto.sistema.modelos
+
+EM sistema_sistema/src/main/java, CRIE O PAKCKAGE com.projeto.sistema.repositorios
+
+
+
+
+EM com.projeto.sistema.controle, CRIE A CLASS principalControle
+
+ADICIONE:
+package com.projeto.sistema.controle;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class principalControle {
+
+	
+	@GetMapping("/administrativo")
+	public String acessaPrincipal() {
+		return "administrativo/home";
+	}
+}
+
+EM sistema_sistema/src/main/resources/templates, CRIE A PASTA administrativo
+
+EM sistema_sistema/src/main/resources/templates/administrativo, CRIE o 	ARQUIVO home.html
+
+ADICIONE:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Word teste!</h1>
+</body>
+</html>
+
+VA NO pomm.xml E COMENTE ISSO: 
+<!-- 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+-->
+
+VA EM SistemaApplication.java
+CLIQUE COM O BOTÃO DIREITO
+Run As
+1 Java Application
